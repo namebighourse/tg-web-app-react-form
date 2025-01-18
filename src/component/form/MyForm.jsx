@@ -16,7 +16,7 @@ const MyForm = () => {
 
     // Отправка данных на сервер или в Telegram
     try {
-      await fetch("http://localhost:5173", {
+      await fetch("https://tg-web-app-react-form.vercel.app/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
