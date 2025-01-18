@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from 'axios'
+
 const MyForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
-    writeText: ""
+    writeText: "",
+    data: "",
+    time: ""
   });
 
   const handleChange = (e) => {
@@ -34,7 +37,7 @@ const MyForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          placeholder="&#10046;"
+          placeholder="&#10047;"
         />
       </label >
       <br />
@@ -46,7 +49,7 @@ const MyForm = () => {
           value={formData.company}
           onChange={handleChange}
           required
-          placeholder="&#10048;"
+          placeholder="&#10047;"
         />
       </label>
       <br />
@@ -60,7 +63,31 @@ const MyForm = () => {
           required
           placeholder="&#10047;"
         />
+        <br />
+      <p className="formTitle">Выберите дату: </p>
+        <input
+          type="date"
+          name="data"
+          value={formData.data}
+          onChange={handleChange}
+          required
+          placeholder="&#10047;"
+        />
       </label>
+      <br />
+      <label>
+      <p className="formTitle">Выберите время: </p>
+        <input
+          type="time"
+          name="time"
+          value={formData.time}
+          onChange={handleChange}
+          required
+          placeholder="&#10047;"
+        />
+      </label>
+      
+      
       <br />
       <button className="send" type="submit">Отправить</button>
     </form>
