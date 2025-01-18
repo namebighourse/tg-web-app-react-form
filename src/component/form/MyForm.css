@@ -1,0 +1,74 @@
+input{
+    border-radius: 10px;
+    
+  }
+  
+  .formWeb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px
+    
+  }
+  .send{
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 34px;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .formTitle{
+    margin: 0px;
+  }
+  
+  @keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0px;
+    }
+    30% {
+      left: 110%;
+      margin-left: 80px;
+    }
+    100% {
+      left: 110%;
+      margin-left: 80px;
+    }
+  }
+  
+  .send {
+    overflow: hidden;
+    position: relative;
+    background-color: #3288e6;;
+  }
+  
+  .send:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 200px;
+    margin-left: 60px;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: all 0.1s;
+    animation-name: slideme;
+    animation-duration: 3s;
+    animation-delay: 0.05s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
