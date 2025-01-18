@@ -72,7 +72,7 @@ button:focus-visible {
 
 body {
   margin: 0;
-  font-family:'Montserrat' ;
+  font-family:'Montserrat', Arial, Helvetica, sans-serif ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(34, 34, 34);
