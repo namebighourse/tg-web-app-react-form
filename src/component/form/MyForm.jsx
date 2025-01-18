@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import axios from 'axios'
 const MyForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,14 +16,8 @@ const MyForm = () => {
 
     // Отправка данных на сервер или в Telegram
     try {
-      await fetch("https://tg-web-app-react-form.vercel.app/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      alert("Форма отправлена!");
+      await axios.post("https://tg-web-app-react-form.vercel.app/",formData);
+        alert("Форма отправлена!");
     } catch (error) {
       console.error("Ошибка при отправке формы:", error);
     }
