@@ -16,7 +16,7 @@ const MyForm = () => {
 
     // Отправка данных на сервер или в Telegram
     try {
-      await axios.post("https://tg-web-app-react-form.vercel.app/",formData);
+      await axios.post("https://tg-web-app-bot-2gml.onrender.com/send-message",formData);
         alert("Форма отправлена!");
     } catch (error) {
       console.error("Ошибка при отправке формы:", error);
